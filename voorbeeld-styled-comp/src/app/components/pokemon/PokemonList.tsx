@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Pokemon from "./Pokemon";
 import styled from "styled-components";
+import Voorbeeld from "./Voorbeeld";
 
 const PokemonContainer = styled.div`
   display: flex;
@@ -75,6 +76,7 @@ const PokemonList = () => {
         </NavOption>
         <NavOption>{nextUrl && <p onClick={handleNext}>Next</p>}</NavOption>
       </Navigation>
+      <Voorbeeld voornaam="Youri" achternaam="Gruiters" leeftijd={18} />
       <PokemonContainer>
         {pokemonData.map((pokemon, key) => (
           <Pokemon pokemon={pokemon} key={key} />
