@@ -50,6 +50,7 @@ const PokemonList = () => {
 
   useEffect(() => {
     fetchPokemons();
+    console.log("hoi luuk");
   }, [apiUrl]);
 
   const fetchPokemons = () => {
