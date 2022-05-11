@@ -76,7 +76,12 @@ const PokemonList = () => {
         </NavOption>
         <NavOption>{nextUrl && <p onClick={handleNext}>Next</p>}</NavOption>
       </Navigation>
-      <Voorbeeld voornaam="Youri" achternaam="Gruiters" leeftijd={18} />
+      <Voorbeeld
+        voornaam="Youri"
+        achternaam="Gruiters"
+        leeftijd={18}
+        volgendePagina={handleNext}
+      />
       <PokemonContainer>
         {pokemonData.map((pokemon, key) => (
           <Pokemon pokemon={pokemon} key={key} />
